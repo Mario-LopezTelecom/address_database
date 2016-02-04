@@ -1,0 +1,5 @@
+contactBook\Contact.class
+contactBook\CollectionOfContacts.class
+contactBook\Application.class
+contactBook\WebController.class
+contactBook\ContactRepository.class

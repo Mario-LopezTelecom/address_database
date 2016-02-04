@@ -1,0 +1,41 @@
+<collectionOfContacts>
+	<!-- Correct contact -->
+	<contact>
+		<firstname>Mario</firstname>
+		<lastname>Lopez</lastname>
+		<address>Pontevedra49</address>
+		<email>mario.lopezTelecom@gmail.com</email>
+		<phone>675198790</phone>
+	</contact>
+	<!-- Missing field contact -->
+	<contact>
+		<lastname>Lopez</lastname>
+		<address>Pontevedra49</address>
+		<email>mario.lopezTelecom@gmail.com</email>
+		<phone>675198790</phone>
+	</contact>
+	<!-- Empty field contact -->
+	<contact>
+		<firstname>Mario</firstname>
+		<lastname></lastname>
+		<address>Pontevedra49</address>
+		<email>mario.lopezTelecom@gmail.com</email>
+		<phone>675198790</phone>
+	</contact>
+	<!-- Bad formed e-mail contact -->
+	<contact>
+		<firstname>Mario</firstname>
+		<lastname>Lopez</lastname>
+		<address>Pontevedra49</address>
+		<email>mario.lopezTelecom.com</email>
+		<phone>675198790</phone>
+	</contact>
+	<!-- Missing optional field contact -->
+	<contact>
+		<firstname>Mario</firstname>
+		<lastname>Lopez</lastname>
+		<address>Pontevedra49</address>
+		<email>mario.lopezTelecom@gmail.com</email>
+	</contact>
+	
+</collectionOfContacts>

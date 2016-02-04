@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form action="#" th:action="@{/Lopez_Mario}" th:object="${contact}" method="post">
+            <table>
+                <tr>
+                    <td>First name:</td>
+                    <td><input type="text" th:field="*{firstname}" /></td>
+                    <td th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}"></td>
+                </tr>
+                <tr>
+                    <td>Last name:</td>
+                    <td><input type="text" th:field="*{lastname}" /></td>
+                    <td th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}"></td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><input type="text" th:field="*{address}" /></td>
+                    <td th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></td>
+                </tr>
+				<tr>
+                    <td>E-mail:</td>
+                    <td><input type="text" th:field="*{email}" /></td>
+                    <td th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></td>
+                </tr>
+                <tr>
+                    <td>Phone:</td>
+                    <td><input type="text" th:field="*{phone}" /></td>
+                    <td th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
