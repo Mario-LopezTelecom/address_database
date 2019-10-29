@@ -1,4 +1,4 @@
-# "Address Database" important notes
+# Address Database important notes 
 This source code corresponds to an assignment for a job interview. It consists of a contact database with a web and XML interfaces, validating the input data. Below is a report describing the development process.
 
 ### Run/Build instructions
@@ -7,7 +7,7 @@ The application is contained in the executable JAR file target "address-database
 In addition, the Project Object Model (POM) for Maven is attached (pom.xml).
 The application can also be run by typing in CMD ``mvn spring-boot:run`.
 
-### Important mappings
+### Important mappings
 As indicated in the assignment, my listing in the browser is mapped to http://localhost:8080/Lopez_Mario .
 The database is expected at http://localhost:3066/exercise. This mapping can be changed by modifying "application.properties" in the source code.
 
@@ -17,7 +17,8 @@ The "input.xml" file is provided as an example to test the application. It conta
 ``curl -H "Content-Type:application/xml" -d @input.xml -X POST http://localhost:8080/Lopez_Mario`.
 
 ---
-#Work report
+
+# Work report
 Author: Mario López Martínez. <br/>
 Date: 05/11/15.<br/>
 Completion time: 6 hours.<br/>
@@ -36,7 +37,7 @@ For the validation of the form data, I decided to use Hibernate Validator instea
 To achieve this objective, it was enough to use JAXB annotations. Unlike the web form input, the object ResponseBinding is not available and I had to find an alternative way to validate a Contact object. After some research, I found the solution by obtaining an instance of the Validator class [3].
 In addition, I had to map both the previous method for getting the form data and this method to the same URL. These overloaded methods get differentiated by the Content-Type of the POST requests.
 
-###### Getting input from XML file (multiple contacts)
+###### Getting input from XML file (multiple contacts)
 I could not find the way to bind a list of contacts in XML to a Java collection (if it is possible at all). Thus, I created a class representing a List of Contacts, and annotated it with JAXB. I iterated over that list, validating each Contact and saving to the DB.
 
 ###### Persistence to DB
